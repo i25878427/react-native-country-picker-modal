@@ -139,10 +139,10 @@ export default class CountryPicker extends Component {
     )
   }
 
-  static renderText(cca2, imageStyle) {
+  static renderText(cca2, textStyle) {
     const country = countries[cca2]
     return (
-      <Text>{`+${country.callingCode}`}</Text>
+      <Text style={textStyle}>{`+${country.callingCode}`}</Text>
     )
   }
 
@@ -412,7 +412,7 @@ export default class CountryPicker extends Component {
                   styles.emojiFlag,
                   styles.imgStyle)}
                 {this.props.disableRenderFlag && CountryPicker.renderText(this.props.cca2,
-                  styles.imgStyle)}
+                  styles.textStyle)}
 
               </View>
             )}
